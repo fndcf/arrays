@@ -3,23 +3,17 @@
 ### chmod +x 'arquivo.py' (chmod é um comando para alterar a permissão de arquivos)
 
 """
-Este script cria um array e faz uma somatoria de 2 em todos os numeros dentro do array, após isso cria outro array para apresentar apenas os valores maiores que 5.
+Este script cria um array e faz uma somatoria de 2 em todos os numeros dentro do array.
 
 Funcionamento do código:
 
 1. Cria um array com 8 numeros selecionados
 2. Cria um segundo array com os 8 numeros selecionados adicionados por 2
-3. Transforma o primeiro array para criar um outro array apenas com os numeros maiores que 5, criando um terceiro array
-4. Transforma o segundo array para criar um outro array apenas com os numeros maiores que 5, criando um quarto array
-5. Remove valores duplicados do quarto array
-6. Printa o primeiro array e o quarto array sem os numeros duplicados
+3. Printa os dois arrays
 """
-original_array = [2, 8, 9, 48, 8, 22, -12, 2]  # Cria um array de 8 numeros selecionados
-second_array = [(val + 2) for val in original_array] # Adiciona 2 em todos os numeros dentro do array
 
-third_array = [x for x in original_array if x > 5] # Transforma o primeiro array em um array que os numeros do array anterior sejam maiores que 5
-forth_array = [x for x in second_array if x > 5] # Transforma o segundo array em um array que os numeros do array anterior sejam maiores que 5
+orignal_array = [2, 8, 9, 48, 8, 22, -12, 2]  # Cria um array de 8 numeros selecionados
+second_array = [(val_1 + 2) for val_1 in orignal_array] # Adiciona 2 em todos os numeros dentro do array
+print(f"{orignal_array}") # Imprime o primeiro array
+print(f"{second_array}") # Imprime o segundo array com os valores adicionados em 2
 
-forth_array_without_duplicates = set(forth_array)
-print(f"{original_array}") # Imprime o primeiro array transformado com apenas os valores maiores que 5
-print(f"{forth_array_without_duplicates}")# Imprime o segundo array transformado com apenas os valores maiores que 5
